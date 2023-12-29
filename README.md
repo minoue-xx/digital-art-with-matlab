@@ -16,7 +16,7 @@ See countdown.mlx : [![Open in MATLAB Online](https://www.mathworks.com/images/r
 
 ![Default Images in Parallax](./parallax/HappyNewYear_2024.gif)
 
-See dfltimg_parallax.m
+See [dfltimg_parallax.m](./parallax/dfltimg_parallax.m)
 
 ![Default Images in Parallax](./parallax/parallax_demo.gif)
 
