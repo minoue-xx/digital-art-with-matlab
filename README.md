@@ -7,12 +7,18 @@ This is a repository to share interesting bits of art created with MATLAB.
 See the README in each directory for how to use each of the examples.
 
 
+## Pong of Wars
+
+![pong_wars](./pong_wars/pong_wars.gif)
+
+See [pong_wars.m](./pong_wars/pong_wars.m) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=minoue-xx/digital-art-with-matlab&file=/pong_wars/pong_wars.m)
+
 ## Parallax
 
 - parallax - Draw two images hidden behind eachother in 3d
 
 
-See countdown.mlx : [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=minoue-xx/digital-art-with-matlab&file=/parallax/countdown.mlx)
+See countdown.mlx or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=minoue-xx/digital-art-with-matlab&file=/parallax/countdown.mlx)
 
 ![Default Images in Parallax](./parallax/HappyNewYear_2024.gif)
 
@@ -20,7 +26,7 @@ See [dfltimg_parallax.m](./parallax/dfltimg_parallax.m)
 
 ![Default Images in Parallax](./parallax/parallax_demo.gif)
 
-## In other's folder
+## In others folder
 
 - cookie - Draw shaped cookies
 - flowers - Draw some flowers
