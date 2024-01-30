@@ -103,7 +103,7 @@ for angle = 0:pi/4:(2*pi-pi/4) % four directions
     jj = floor(checkY / SQUARE_SIZE);
 
     if ii >= 1 && ii <= numSquaresX && jj >= 1 && jj <= numSquaresY
-        if ~squares(ii, jj) == color
+        if ~(squares(ii, jj) == color)
             squares(ii, jj) = color;
 
             % Determine bounce direction based on the angle
