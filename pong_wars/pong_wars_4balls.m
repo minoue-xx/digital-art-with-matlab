@@ -2,7 +2,6 @@
 % https://github.com/vnglst/pong-wars/blob/main/index.html
 % Idea for Pong wars: https://twitter.com/nicolasdnl/status/1749715070928433161
 function pong_wars_4balls
-% Define the color palette
 
 % Define 5 colors
 colors = lines(5);
