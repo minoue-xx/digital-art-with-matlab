@@ -56,13 +56,14 @@ hBall2 = line(x2-SQUARE_SIZE/2, y2-SQUARE_SIZE/2,'Marker','o',...
 % Start the game loop
 while ishandle(hFig)
     % Update ball positions
-    % With square boundary
+
+    % With Day/Night boundary
     DAY_COLORID = 0;
     [dx1, dy1, squares] = updateSquareAndBounce(x1, y1, dx1, dy1, DAY_COLORID, squares, SQUARE_SIZE, hAx);
     NIGHT_COLORID = 1;
     [dx2, dy2, squares] = updateSquareAndBounce(x2, y2, dx2, dy2, NIGHT_COLORID, squares, SQUARE_SIZE, hAx);
 
-    % With Day/Night boundary
+    % With square box boundary
     [dx1, dy1] = checkBoundaryCollision(x1, y1, dx1, dy1, SQUARE_SIZE, hAx);
     [dx2, dy2] = checkBoundaryCollision(x2, y2, dx2, dy2, SQUARE_SIZE, hAx);
 
@@ -102,7 +103,7 @@ for angle = 0:pi/4:(2*pi-pi/4) % four directions
     jj = floor(checkY / SQUARE_SIZE);
 
     if ii >= 1 && ii <= numSquaresX && jj >= 1 && jj <= numSquaresY
-        if ~isequal(squares(ii, jj), color)
+        if ~squares(ii, jj) == color
             squares(ii, jj) = color;
 
             % Determine bounce direction based on the angle
