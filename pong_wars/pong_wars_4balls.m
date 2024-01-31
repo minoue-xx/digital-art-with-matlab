@@ -41,8 +41,8 @@ hAx.YColor = "none";
 % 1 2
 x1 = hAx.XLim(2) / 4;
 y1 = hAx.YLim(2) / 4;
-dx1 = INITIAL_SPEED*2; % 100% up for ball 1
-dy1 = -INITIAL_SPEED*2;
+dx1 = INITIAL_SPEED*4; % 100% up for ball 1
+dy1 = -INITIAL_SPEED*4;
 
 x2 = (hAx.XLim(2) / 4) * 3;
 y2 = hAx.YLim(2) / 4;
@@ -140,8 +140,13 @@ for angle = 0:pi/4:(2*pi-pi/4) % four directions
             end
 
             % Add some randomness to the bounce to prevent the balls from getting stuck in a loop
-            dx = dx*(1+0.01*(rand-0.5));
-            dy = dy*(1+0.01*(rand-0.5));
+            % Add some randomness to the bounce to prevent the balls from getting stuck in a loop
+            % Keep speed constant and add fluctuation to the expected angle
+            % (pi/4 degree)
+            vel = sqrt(dx.^2 + dy.^2);
+            theta = pi/4*(1+0.01*(rand-0.5));
+            dx = sign(dx)*vel*cos(theta);
+            dy = sign(dy)*vel*sin(theta);
         end
     end
 end

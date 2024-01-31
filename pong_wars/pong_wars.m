@@ -49,9 +49,9 @@ dy2 = INITIAL_SPEED;
 
 % Create ball graphics objects
 hBall1 = line(x1-SQUARE_SIZE/2, y1-SQUARE_SIZE/2,Marker='o',...
-    MarkerSize=8, MarkerFaceColor=DAY_BALL_COLOR);
+    MarkerSize=8, MarkerFaceColor=DAY_BALL_COLOR, MarkerEdgeColor=DAY_BALL_COLOR);
 hBall2 = line(x2-SQUARE_SIZE/2, y2-SQUARE_SIZE/2,'Marker','o',...
-    MarkerSize=8, MarkerFaceColor=NIGHT_BALL_COLOR);
+    MarkerSize=8, MarkerFaceColor=NIGHT_BALL_COLOR, MarkerEdgeColor=NIGHT_BALL_COLOR);
 
 % Start the game loop
 while ishandle(hFig)
@@ -114,8 +114,12 @@ for angle = 0:pi/4:(2*pi-pi/4) % four directions
             end
 
             % Add some randomness to the bounce to prevent the balls from getting stuck in a loop
-            dx = dx*(1+0.01*(rand-0.5));
-            dy = dy*(1+0.01*(rand-0.5));
+            % Keep speed constant and add fluctuation to the expected angle
+            % (pi/4 degree)
+            vel = sqrt(dx.^2 + dy.^2);
+            theta = pi/4*(1+0.01*(rand-0.5));
+            dx = sign(dx)*vel*cos(theta);
+            dy = sign(dy)*vel*sin(theta);
         end
     end
 end
