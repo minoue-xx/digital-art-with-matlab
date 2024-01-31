@@ -41,8 +41,8 @@ hAx.YColor = "none";
 % 1 2
 x1 = hAx.XLim(2) / 4;
 y1 = hAx.YLim(2) / 4;
-dx1 = INITIAL_SPEED*4; % 100% up for ball 1
-dy1 = -INITIAL_SPEED*4;
+dx1 = INITIAL_SPEED*2; % 100% up for ball 1
+dy1 = -INITIAL_SPEED*2;
 
 x2 = (hAx.XLim(2) / 4) * 3;
 y2 = hAx.YLim(2) / 4;
